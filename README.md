@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circular Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #111;
+        }
+
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+        }
+
+        .circle img {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        /* Position images in circle */
+        .img1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .img2 { top: 50%; right: 0; transform: translate(50%, -50%); }
+        .img3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+        .img4 { top: 50%; left: 0; transform: translate(-50%, -50%); }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="circle">
+    <img src="https://via.placeholder.com/80" class="img1">
+    <img src="https://via.placeholder.com/80" class="img2">
+    <img src="https://via.placeholder.com/80" class="img3">
+    <img src="https://via.placeholder.com/80" class="img4">
+</div>
+
+</body>
+</html>
